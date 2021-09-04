@@ -1,0 +1,52 @@
+#contact {
+    min-height: 60vh;
+}
+
+#contact p {
+    color: var(--white);
+    padding: 0 var(--content-padding);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .9em;
+    padding: 4em;
+}
+
+form > div {
+    display: flex;
+    align-items: flex-start;
+    gap: .8em;
+} 
+
+label {
+    padding-top: .5em;
+    color: var(--white);
+}
+
+input, textarea {
+    border: none;
+    background-color: #F5EFED;
+    border-radius: 2em;
+    height: 2.5em;
+    width: 329px;
+    outline: none;
+    padding: 0 16px;
+    transition: .2s;
+}
+
+textarea {
+    height: auto;
+    padding: 16px 16px;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 3pt 2pt var(--yellow);
+}
+
+input[name="message"] {
+    height: 14em;
+}

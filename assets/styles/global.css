@@ -1,0 +1,184 @@
+/* Colors */
+:root {
+  --white: #f5efed;
+  --black: #302a28;
+  --light-black: #5c453f;
+
+  --red: #f34343;
+  --purple: #904e95;
+  --orange: #e96443;
+  --yellow: #f5ba3b;
+
+  --content-padding: 20vw;
+}
+
+/* General important things */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+/* Fonts */
+body,
+textarea {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+}
+
+a,
+h1,
+button,
+.button,
+.rainbow-font {
+  font-family: "Urbanist", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  /* TODO: FIND em'S */
+  font-size: 3em;
+  color: var(--white);
+  font-weight: 100;
+  padding: 0 20vw;
+}
+
+p,
+li {
+  /* TODO: FIND em'S */
+  font-size: 1em;
+  color: var(--light-black);
+}
+
+a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: var(--yellow);
+}
+
+.rainbow-font {
+  background-color: var(--orange);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    var(--purple),
+    var(--orange)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* Components */
+section {
+  min-height: 100vh;
+  padding: 4em 0 3em;
+  position: relative;
+}
+
+button,
+.button {
+  display: inline-block;
+  min-width: 241px;
+  min-height: 49px;
+  line-height: 46px;
+  background: var(--yellow);
+  border-radius: 61px;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--white);
+  border: none;
+}
+
+nav {
+  z-index: 9999;
+  width: calc(100vw - 80px);
+  display: flex;
+  padding: 1em 40px;
+  position: fixed;
+  background-color: #f5efedbe;
+}
+
+nav > a {
+  margin-left: 32px;
+  transition: 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+nav > a:first-child {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+nav > a.active {
+  color: var(--purple);
+  text-shadow: -0.5px -0.5px 1px var(--purple), 0.5px -0.5px 1px var(--purple),
+    -0.5px 0.5px 1px var(--purple), 0.5px 0.5px 1px var(--purple);
+}
+
+.gradient-1 {
+  background-color: var(--orange);
+  background-image: -webkit-linear-gradient(var(--orange), rgb(196, 91, 101));
+}
+
+.gradient-2 {
+  background-color: var(--orange);
+  background-image: -webkit-linear-gradient(rgb(168, 84, 127), var(--purple));
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  margin: 36px 82px;
+  color: var(--white);
+}
+
+.wave {
+  position: absolute;
+  width: 100vw;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.noselect {
+  user-select: none;
+}
+
+/* The snackbar */
+#snackbar {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1em 3em;
+  border-radius: 3em;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  bottom: -3em;
+  opacity: 0;
+  transition: .4s;
+}
+
+#snackbar.show {
+  opacity: 1;
+  bottom: 3em;
+}

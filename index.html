@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google.fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Urbanist:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Kute.js: used for animating blobs -->
+    <!-- TODO: uncomment the following line when adding animations -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/kute.js/2.0.0/kute.min.js"></script> -->
+    <!-- My css -->
+    <link rel="stylesheet" href="assets/styles/global.css" />
+    <link rel="stylesheet" href="assets/styles/home.css" />
+    <link rel="stylesheet" href="assets/styles/skills.css" />
+    <link rel="stylesheet" href="assets/styles/about.css" />
+    <link rel="stylesheet" href="assets/styles/interests.css" />
+    <link rel="stylesheet" href="assets/styles/contact.css" />
+    <title>Josip Mužić</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#home">joe</a>
+      <a href="#skills">skills</a>
+      <a href="#about">about</a>
+      <a href="#interests">interests</a>
+    </nav>
+    <!-- *Home -->
+    <section id="home">
+      <h1 class="small">
+        Hey, I'm <span class="rainbow-font">Joe,</span> and I am a
+      </h1>
+      <h1 class="rainbow-font">Full-stack Developer.</h1>
+      <a class="button" href="#contact">contact</a>
+      <svg
+        id="topWave"
+        class="wave"
+        viewBox="0 0 900 600"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      ></svg>
+    </section>
+
+    <div class="gradient-1">
+      <!-- *Skills -->
+      <section id="skills">
+        <h1>skills</h1>
+        <div class="two-columns">
+          <div>
+            <h2>back-end</h2>
+            <p>
+              I also have knowledge of various SQL languages and serverless
+              platforms
+            </p>
+            <p class="subtitle">Languages</p>
+            <ul>
+              <li>Javascript</li>
+              <li>Java</li>
+              <li>PHP</li>
+              <li>Python</li>
+            </ul>
+            <p class="subtitle">Frameworks</p>
+            <p>Node.js, Spring</p>
+          </div>
+          <div>
+            <h2>front-end</h2>
+            <p>Most of my current projects require front-end work</p>
+            <p class="subtitle">Languages</p>
+            <ul>
+              <li>Javascript</li>
+              <li>Typescript</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>Dart</li>
+              <li>Kotlin</li>
+              <li>Swift</li>
+            </ul>
+            <p class="subtitle">Frameworks</p>
+            <p>React, Angular, Vue, Flutter</p>
+          </div>
+        </div>
+        <div class="full-width-box">
+          <p>
+            Those are only some of the technologies I’ve dabbled in. I’ve also
+            worked on two Wordpress projects, and most of my projects required
+            me to do a lot of setup (or even full database setups) using
+            Firebase.
+          </p>
+          <p>
+            Right now, I am in my last year of University, but I’m very
+            enthusiastic about my field that starting from last year, I’ve been
+            working full time at various companies doing a lot of fun projects.
+            I am mainly focused on front-end technologies, but once I finish
+            university and I have more free time, I’d like to work on more
+            back-end projects.
+          </p>
+          <p>
+            Unfortunately most of the projects I worked on were under NDA’s so I
+            can’t show them, but all that you need to know is that I mostly used
+            Flutter + Firebase, or React with another person working on the
+            backend.
+          </p>
+          <p>
+            Note: Although I am not UX/UI designer, I’m not too shabby when it
+            comes to making some designs. I made this one.
+          </p>
+        </div>
+      </section>
+      <!-- *About -->
+      <section id="about">
+        <h1>about</h1>
+        <div>
+          <div class="chat-bubble">
+            <h4>Hi. My name is Josip Mužić, but you can call me Joe.</h4>
+            <p>
+              Until my last year of highschool, I thought I go for a music
+              university and study conducting. As you can see from my portfolio,
+              I ended up changing my field quite drastically.
+            </p>
+            <p>
+              I still enjoy playing music, but I feel like I definitelly chose
+              the right industry to work in. I really enjoy programming, to me
+              its as if I’m constantly just playing puzzle games. Even when
+              things are going smoothly on a project and the puzzle is actually
+              quite simple, I like to think of even more efficient ways to solve
+              the problem, that way I still get the joy of solving a puzzle.To
+              learn more about me, watch my introduction video.
+            </p>
+          </div>
+          <div class="right-side">
+            <img src="https://pfpmaker.com/_nuxt/img/profile-3-1.3e702c5.png" />
+            <button onclick="test()">video introduction</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="dark-background">
+      <section class="wave-section">
+        <svg
+          id="interestsTop"
+          class="wave"
+          viewBox="0 0 900 600"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+        ></svg>
+      </section>
+      <!-- *About -->
+      <section id="interests">
+        <h1>interests</h1>
+        <div id="catan"></div>
+      </section>
+      <section class="wave-section">
+        <svg
+          id="interestsBottom"
+          class="wave"
+          viewBox="0 0 900 600"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+        ></svg>
+      </section>
+    </div>
+
+    <div class="gradient-2">
+      <section id="contact">
+        <h1>contact</h1>
+        <p>
+          If you want to reach out to me, then thats great!
+          <br />
+          Use the form below to quickly and easily reach out to me.
+          <br />
+          I’ll immediately get a notification and I’ll try and come back to you
+          as soon as possible.
+          <br />
+          I need your name, to know who’s talking to me, email to reach back to
+          you, and then lastly just leave me the note you wanted me to have.
+        </p>
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" />
+            <label class="opacity-0">Name:</label>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+            <label class="opacity-0">Email:</label>
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <label class="opacity-0">Message:</label>
+          </div>
+          <button type="submit">send</button>
+        </form>
+      </section>
+      <footer>
+        <a onclick="copyMail()">email (copy mail)</a> 
+        <a href="https://www.linkedin.com/in/josip-muzic/" target="_blank">linked-in</a>
+        <a href="mailto: josipmuzic99@gmail.com">email (open app)</a>
+      </footer>
+    </div>
+    <div id="snackbar">Copied email to clipboard</div>
+
+    <script src="assets/scripts/scrollspy.js"></script>
+    <script src="assets/scripts/waves.js"></script>
+    <script src="assets/scripts/catan.js"></script>
+    <script src="assets/scripts/global.js"></script>
+  </body>
+</html>
