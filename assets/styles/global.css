@@ -19,6 +19,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 /* Fonts */
@@ -100,7 +101,7 @@ button,
 }
 
 nav {
-  z-index: 9999;
+  z-index: 100;
   width: calc(100vw - 80px);
   display: flex;
   padding: 1em 40px;
@@ -159,6 +160,10 @@ footer a {
 
 .noselect {
   user-select: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 /* The snackbar */

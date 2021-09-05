@@ -12,11 +12,11 @@
 
 #dark-background {
   background: var(--black);
-  z-index: 999;
+  z-index: 99;
 }
 
 #interests {
-  z-index: 999;
+  z-index: 99;
 }
 
 #catan {
@@ -33,6 +33,7 @@
 
 .catan-row > div {
   position: relative;
+  cursor: pointer;
 }
 
 /* The following is for the little circles containing the icons */

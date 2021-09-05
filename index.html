@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/styles/about.css" />
     <link rel="stylesheet" href="assets/styles/interests.css" />
     <link rel="stylesheet" href="assets/styles/contact.css" />
+    <link rel="stylesheet" href="assets/styles/overlay.css" />
     <title>Josip Mužić</title>
   </head>
   <body>
@@ -204,13 +205,16 @@
         </form>
       </section>
       <footer>
-        <a onclick="copyMail()">email (copy mail)</a> 
-        <a href="https://www.linkedin.com/in/josip-muzic/" target="_blank">linked-in</a>
+        <a onclick="copyMail()">email (copy mail)</a>
+        <a href="https://www.linkedin.com/in/josip-muzic/" target="_blank"
+          >linked-in</a
+        >
         <a href="mailto: josipmuzic99@gmail.com">email (open app)</a>
       </footer>
     </div>
     <div id="snackbar">Copied email to clipboard</div>
 
+    <div id="overlay" onclick="hideOverlay()"></div>
     <script src="assets/scripts/scrollspy.js"></script>
     <script src="assets/scripts/waves.js"></script>
     <script src="assets/scripts/catan.js"></script>

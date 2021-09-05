@@ -79,6 +79,7 @@ async function loadSvgContainer(div) {
         response +
         `<span class="dots noselect ">${".".repeat(catanIcon.dots)}</span>`;
       div.appendChild(svgContainer);
+      div.onclick = () => showOverlay(catanIcon.name);
     });
 }
 
@@ -99,3 +100,14 @@ function getRandomHex() {
 }
 
 setupCatanBoard();
+
+function showOverlay(iconName) {
+  console.log(iconName);
+  document.getElementById("overlay").setAttribute("class", "active-overlay");
+  document.getElementsByTagName("html")[0].setAttribute("class", "overflow-hidden");
+}
+
+function hideOverlay() {
+  document.getElementById("overlay").setAttribute("class", "");
+  document.getElementsByTagName("html")[0].setAttribute("class", "");
+}
