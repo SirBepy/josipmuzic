@@ -125,8 +125,8 @@ nav > a:first-child {
 
 nav > a.active {
   color: var(--purple);
-  text-shadow: -0.5px -0.5px 1px var(--purple), 0.5px -0.5px 1px var(--purple),
-    -0.5px 0.5px 1px var(--purple), 0.5px 0.5px 1px var(--purple);
+  text-shadow: -0.1px -0.1px .5px var(--purple), 0.1px -0.1px .5px var(--purple),
+    -0.1px 0.1px .5px var(--purple), 0.1px 0.1px .5px var(--purple);
 }
 
 .gradient-1 {
