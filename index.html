@@ -38,7 +38,7 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    
+
     <!-- *My metatags -->
     <meta
       name="description"
@@ -241,8 +241,7 @@
           I need your name, to know who’s talking to me, email to reach back to
           you, and then lastly just leave me the note you wanted me to have.
         </p>
-        <form>
-          <!-- TODO: Add form submission logic -->
+        <form onsubmit="onFormSubmit()">
           <div>
             <label for="name">Name:</label>
             <input type="text" name="name" />
@@ -263,7 +262,10 @@
       </section>
       <footer>
         <a onclick="copyMail()">email (copy mail)</a>
-        <a href="https://www.linkedin.com/in/josip-muzic/" target="_blank"
+        <a
+          href="https://www.linkedin.com/in/josip-muzic/"
+          target="_blank"
+          rel="noopener"
           >linked-in</a
         >
         <a href="mailto: josipmuzic99@gmail.com">email (open app)</a>
@@ -276,5 +278,6 @@
     <script src="assets/scripts/waves.js"></script>
     <script src="assets/scripts/catan.js"></script>
     <script src="assets/scripts/global.js"></script>
+    <script src="assets/scripts/submitMail.js"></script>
   </body>
 </html>
