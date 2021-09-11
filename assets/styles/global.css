@@ -62,7 +62,7 @@ a {
 }
 
 a:hover {
-  color: var(--yellow);
+  color: var(--yellow) !important;
 }
 
 .rainbow-font {
@@ -98,6 +98,14 @@ button,
   font-size: 1.5em;
   color: var(--white);
   border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover,
+.button:hover {
+  background: #ffc956;
+  color: var(--white);
 }
 
 nav {
