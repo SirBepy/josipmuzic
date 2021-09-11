@@ -1,19 +1,128 @@
 #overlay {
   position: fixed;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   z-index: 200;
-  transition: .5s;
-  
+  transition: 0.5s;
+
   opacity: 0;
   pointer-events: none;
 }
 
-div.active-overlay {
+.active-overlay {
   pointer-events: initial !important;
   opacity: 1 !important;
+}
+
+/* The following is just for the cards */
+#catan-card {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 360px;
+  height: 540px;
+  max-width: 80vw;
+  max-height: 120vw;
+
+  border-radius: 1em;
+  background-color: var(--catan);
+  transition: 0.5s;
+  overflow: hidden;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#catan-card > div {
+  padding: 7%;
+  height: 90.5%;
+}
+
+#catan-card > div > div {
+  display: grid;
+  grid-template-rows: 8% 50% 42%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.active-overlay #catan-card {
+  top: 50%;
+}
+
+/* Top part of card */
+#card-head {
+  position: relative;
+  z-index: 1;
+
+  background-color: var(--orange);
+  padding-left: calc(10% + 4px);
+
+  border: 2px solid var(--white);
+  -webkit-box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+  -moz-box-shadow: inset 0 0 6px #000000;
+  -webkit-box-shadow: inset 0 0 6px #000000;
+  box-shadow: inset 0 0 6px #000000;
+}
+
+#card-head p {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#card-head::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  height: 120%;
+  padding-left: 10%;
+  background-color: var(--orange);
+  border: 4px solid var(--white);
+  -webkit-box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.3);
+
+  -moz-box-shadow: inset 0 0 6px #000000;
+  -webkit-box-shadow: inset 0 0 6px #000000;
+  box-shadow: inset 0 0 6px #000000;
+}
+
+/* Middle part of card */
+#card-image {
+  margin-top: -2px;
+  background-color: rgba(255, 0, 0, 0.445);
+  border: 2px solid var(--white);
+
+  -moz-box-shadow: inset 0 0 6px #000000;
+  -webkit-box-shadow: inset 0 0 6px #000000;
+  box-shadow: inset 0 0 6px #000000;
+}
+
+/* Bottom part of card */
+#card-body {
+  position: relative;
+}
+
+#card-body::after {
+  border-radius: 100%;
+  position: absolute;
+  background: var(--catan-light);
+  content: "";
+  width: 300%;
+  height: 200%;
+  left: -100%;
+  bottom: -90%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
