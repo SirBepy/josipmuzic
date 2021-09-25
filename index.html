@@ -231,18 +231,7 @@
     <div class="gradient-2">
       <section id="contact">
         <h1>contact</h1>
-        <p>
-          If you want to reach out to me, then thats great!
-          <br />
-          Use the form below to quickly and easily reach out to me.
-          <br />
-          I’ll immediately get a notification and I’ll try and come back to you
-          as soon as possible.
-          <br />
-          I need your name, to know who’s talking to me, email to reach back to
-          you, and then lastly just leave me the note you wanted me to have.
-        </p>
-        <form onsubmit="onFormSubmit()">
+        <form action="https://formspree.io/f/xzbyoqwp" method="POST" id="contact-form">
           <div>
             <label for="name">Name:</label>
             <input type="text" name="name" />
@@ -250,7 +239,7 @@
           </div>
           <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" />
+            <input type="email" name="_replyto" />
             <label class="opacity-0">Email:</label>
           </div>
           <div>
