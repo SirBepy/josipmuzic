@@ -11,25 +11,30 @@ function preloadCatanImages() {
 function setupCatanBoard() {
   preloadCatanImages();
 
+  // Turn the entire array into a neat little array that will be modified as we load the data
+  const catanIconNames = Object.keys(cardData).map((key) => {
+    return { name: key, dots: cardData[key].dots };
+  });
+
   for (let x = 0; x < 5; x++) {
     const div = document.createElement("div");
     div.className = "catan-row";
 
     if (x === 0 || x === 4) {
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
     } else if (x === 1 || x === 3) {
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
     } else {
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
       div.appendChild(images.sand);
-      div.appendChild(getRandomHex());
-      div.appendChild(getRandomHex());
+      div.appendChild(getRandomHex(catanIconNames.shift()));
+      div.appendChild(getRandomHex(catanIconNames.shift()));
     }
 
     catanBoard.appendChild(div);
@@ -38,9 +43,8 @@ function setupCatanBoard() {
   preloadCardImages();
 }
 
-async function loadSvgContainer(div) {
+async function loadSvgContainer(div, catanIcon) {
   const svgContainer = document.createElement("div");
-  const catanIcon = catanIconNames.shift();
   fetch(`/assets/images/catanIcons/${catanIcon.name}.svg`)
     .then((response) => response.text())
     .then((response) => {
@@ -55,7 +59,7 @@ async function loadSvgContainer(div) {
     });
 }
 
-function getRandomHex() {
+function getRandomHex(catanIcon) {
   const hexKeys = Object.keys(hexTypes);
   const index = Math.floor(Math.random() * hexKeys.length);
   const key = hexKeys[index];
@@ -67,7 +71,7 @@ function getRandomHex() {
   img.src = images[key].src;
   const div = document.createElement("div");
   div.appendChild(img);
-  loadSvgContainer(div);
+  loadSvgContainer(div, catanIcon);
   return div;
 }
 
@@ -128,117 +132,114 @@ const hexTypes = {
 };
 
 // Order of dots needs to remain as: 3, 1, 4, 1, 5, 3, 3, 4, 2, 2, 5, 5, 2, 3, 4, 4, 5, 2
-const catanIconNames = [
-  { name: "FavoriteFood", dots: 3 },
-  { name: "FavoriteBooks", dots: 1 },
-  { name: "Married", dots: 4 },
-  { name: "Traveling", dots: 1 },
-  { name: "Music", dots: 5 },
-  { name: "Dog", dots: 3 },
-  { name: "WhoInspiresMe", dots: 3 },
-  { name: "Chess", dots: 4 },
-  { name: "Languages", dots: 2 },
-  { name: "Games", dots: 2 },
-  { name: "RIT", dots: 5 },
-  { name: "Animation", dots: 5 },
-  { name: "Teacher", dots: 2 },
-  { name: "FutureVision", dots: 3 },
-  { name: "Running", dots: 4 },
-  { name: "Owner", dots: 4 },
-  { name: "Linux", dots: 5 },
-  { name: "Chef", dots: 2 },
-];
-
 const cardData = {
   FavoriteFood: {
     title: "Food",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 3,
   },
   FavoriteBooks: {
     title: "Books",
     imgUrl: "books.jpg",
     text: "I studied in RIT",
+    dots: 1,
   },
   Married: {
     title: "Married",
     imgUrl: "RIT.jpeg", //TODO: Find image
     text: "I studied in RIT",
+    dots: 4,
   },
   Traveling: {
     title: "Traveling",
     imgUrl: "traveling.jpg",
     text: "I studied in RIT",
+    dots: 1,
   },
   Music: {
     title: "Music",
     imgUrl: "music.jpg",
     text: "Giving that I spent so much time in Music Highschool, I grew very fond of all sorts of music genres.<br/><br/>Favorite genres: Jazz, Classical and Bubblegum Pop",
+    dots: 5,
   },
   Dog: {
     title: "Animals",
     imgUrl: "RIT.jpeg", // TODO: Find my own
     text: "Growing up I had a lot of pets. All of these pets were mine. ", // TODO: Not make this depressing
+    dots: 3,
   },
   WhoInspiresMe: {
     title: "Who Inspires Me",
     imgUrl: "RIT.jpeg",
     text: "Growing up <b>Tony Stark</b> was my least favorite hero because the main special thing about him was that he was smart. Later on, this became the main reason why he was my favorite Super-Hero of all time.",
+    dots: 3,
   },
   Chess: {
     title: "Board Games",
     imgUrl: "boardGames.jpeg",
     text: "I always had a big affinity towards board games, but I couldn't play much of them as a kid because they were so expensive. Recently, however, I got to try some. <br/><br/> Favorite games: Scotland yard, Catan, Ticket to ride",
+    dots: 4,
   },
   Languages: {
     title: "Languages",
     imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    text: "I am a bilingual.<br/>My mother is from Ireland and my father is from Croatia, so I always knew <b>English</b> and <b>Croatian</b>.<br/> I tried learning <b>German</b> and <b>Italian</b>, but unfortunately I'm very bad at learning new languages.",
+    dots: 2,
   },
   Games: {
     title: "Video Games",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 2,
   },
   RIT: {
     title: "Education",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 5,
   },
   Animation: {
     title: "Animation",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 5,
   },
   Teacher: {
     title: "Teacher",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 2,
   },
   FutureVision: {
     title: "The Future",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 3,
   },
   Running: {
     title: "Sports",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 4,
   },
   Owner: {
     title: "My Restaurant",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 4,
   },
   Linux: {
     title: "Linux",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 5,
   },
   Chef: {
     title: "I love to cook",
     imgUrl: "RIT.jpeg",
     text: "I studied in RIT",
+    dots: 2,
   },
 };
 
