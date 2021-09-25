@@ -1,7 +1,7 @@
 async function onFormSubmit(event) {
   event.preventDefault();
-  const status = document.getElementById("my-form-status");
   const data = new FormData(event.target);
+
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -10,11 +10,11 @@ async function onFormSubmit(event) {
     },
   })
     .then((response) => {
-        // TODO: Add success handler
+      showSnackbar("Sent successfully")
       form.reset();
     })
     .catch((error) => {
-        // TODO: Add fail handler
+      showSnackbar("Something went wrong, please try again later")
     });
 }
 
