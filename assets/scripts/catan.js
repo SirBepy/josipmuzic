@@ -69,6 +69,7 @@ function getRandomHex(catanIcon) {
 
   const img = new Image();
   img.src = images[key].src;
+  img.setAttribute("draggable", false);
   const div = document.createElement("div");
   div.appendChild(img);
   loadSvgContainer(div, catanIcon);
@@ -81,6 +82,7 @@ function preloadCardImages() {
   for (const index in cardDataKeys) {
     const cardKey = cardDataKeys[index];
     cardData[cardKey].img = new Image();
+    cardData.img.setAttribute("draggable", false);
     cardData[
       cardKey
     ].img.src = `/assets/images/catanCardImages/${cardData[cardKey].imgUrl}`;
@@ -165,7 +167,7 @@ const cardData = {
   },
   Dog: {
     title: "Animals",
-    imgUrl: "dog.jpg",
+    imgUrl: "dogs.jpg",
     text: "Growing up I had a lot of pets. I still have the same love for pets and loving spending time with my dog.",
     dots: 3,
   },
@@ -239,7 +241,7 @@ const cardData = {
   },
   Chef: {
     title: "I love to cook",
-    imgUrl: "RIT.jpeg",
+    imgUrl: "food.jpg",
     text: "I love trying new food and learning new recipes. <br/>My most recent food passion? Ramen!",
     dots: 2,
   },
