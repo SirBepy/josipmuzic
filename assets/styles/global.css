@@ -64,7 +64,7 @@ a {
 }
 
 a:hover {
-  color: var(--yellow) !important;
+  color: var(--yellow);
 }
 
 .rainbow-font {
