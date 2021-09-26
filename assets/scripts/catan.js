@@ -133,82 +133,84 @@ const hexTypes = {
 
 // Order of dots needs to remain as: 3, 1, 4, 1, 5, 3, 3, 4, 2, 2, 5, 5, 2, 3, 4, 4, 5, 2
 const cardData = {
-  FavoriteFood: {
-    title: "Food",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
-    dots: 3,
-  },
-  FavoriteBooks: {
-    title: "Books",
-    imgUrl: "books.jpg",
-    text: "I studied in RIT",
-    dots: 1,
-  },
-  Married: {
-    title: "Married",
-    imgUrl: "RIT.jpeg", //TODO: Find image
-    text: "I studied in RIT",
-    dots: 4,
-  },
-  Traveling: {
-    title: "Traveling",
-    imgUrl: "traveling.jpg",
-    text: "I studied in RIT",
-    dots: 1,
-  },
   Music: {
     title: "Music",
     imgUrl: "music.jpg",
     text: "Giving that I spent so much time in Music Highschool, I grew very fond of all sorts of music genres.<br/><br/>Favorite genres: Jazz, Classical and Bubblegum Pop",
-    dots: 5,
-  },
-  Dog: {
-    title: "Animals",
-    imgUrl: "RIT.jpeg", // TODO: Find my own
-    text: "Growing up I had a lot of pets. All of these pets were mine. ", // TODO: Not make this depressing
-    dots: 3,
-  },
-  WhoInspiresMe: {
-    title: "Who Inspires Me",
-    imgUrl: "RIT.jpeg",
-    text: "Growing up <b>Tony Stark</b> was my least favorite hero because the main special thing about him was that he was smart. Later on, this became the main reason why he was my favorite Super-Hero of all time.",
     dots: 3,
   },
   Chess: {
     title: "Board Games",
     imgUrl: "boardGames.jpeg",
     text: "I always had a big affinity towards board games, but I couldn't play much of them as a kid because they were so expensive. Recently, however, I got to try some. <br/><br/> Favorite games: Scotland yard, Catan, Ticket to ride",
+    dots: 1,
+  },
+  Married: {
+    title: "Married",
+    imgUrl: "married.jpeg",
+    text: "Together 6 years and counting, she was my motivation to work so hard and get to where I am today.",
+    dots: 4,
+  },
+  Traveling: {
+    title: "Traveling",
+    imgUrl: "traveling.jpg",
+    text: "Whether on a beach or hiking up a mountain - I love exploring the world and learning about new cultures.",
+    dots: 1,
+  },
+  React: {
+    title: "React",
+    imgUrl: "music.jpg",
+    text: "...",
+    dots: 5,
+  },
+  Dog: {
+    title: "Animals",
+    imgUrl: "dog.jpg",
+    text: "Growing up I had a lot of pets. I still have the same love for pets and loving spending time with my dog.",
+    dots: 3,
+  },
+  WhoInspiresMe: {
+    title: "Who Inspires Me",
+    imgUrl: "tonystark.jpg",
+    text: "Growing up <b>Tony Stark</b> was my least favorite hero because the main special thing about him was that he was smart. Later on, this became the main reason why he was my favorite Super-Hero of all time.",
+    dots: 3,
+  },
+  Animation: {
+    title: "Animation",
+    // TODO: Image for this
+    imgUrl: "RIT.jpeg",
+    text: "I started animating at a young age. While I don't have my time to do it now, I still find it fascinating and would love to take it up as a more serious hobby in the near future.",
     dots: 4,
   },
   Languages: {
     title: "Languages",
-    imgUrl: "RIT.jpeg",
+    imgUrl: "languages.jpg",
     text: "I am a bilingual.<br/>My mother is from Ireland and my father is from Croatia, so I always knew <b>English</b> and <b>Croatian</b>.<br/> I tried learning <b>German</b> and <b>Italian</b>, but unfortunately I'm very bad at learning new languages.",
     dots: 2,
   },
   Games: {
     title: "Video Games",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    imgUrl: "videogames.jpg",
+    text: "I guess this was an obvious one. I enjoy playing many different video games and I believe the best times I have is when playing with friends.",
     dots: 2,
   },
-  RIT: {
-    title: "Education",
+  Node: {
+    title: "Node.js",
     imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    text: "...",
     dots: 5,
   },
-  Animation: {
-    title: "Animation",
+  Flutter: {
+    title: "Flutter",
+    // TODO: Image for this
     imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    text: "...",
     dots: 5,
   },
-  Teacher: {
-    title: "Teacher",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+  Running: {
+    title: "Sports",
+    imgUrl: "running.jpg",
+    text: "I love running every morning/evening. For me, it's a great way to relax and I believe Maxi (my dog) enjoys it too!",
     dots: 2,
   },
   FutureVision: {
@@ -217,28 +219,28 @@ const cardData = {
     text: "I studied in RIT",
     dots: 3,
   },
-  Running: {
-    title: "Sports",
+  RIT: {
+    title: "Education",
     imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    text: "I studied at RIT and am on track to graduate with honors in the next few months. I was a teaching assisstant for multiple subjects and students would always come to me if they were stuck and needed something explained.",
     dots: 4,
   },
   Owner: {
     title: "My Restaurant",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    imgUrl: "viktors.jpg",
+    text: "While I was living in Bosnia and Hercegovina I co-owned a restaurant. I also waitered there during tourist season over the summer. It was a challenging job, but I learnt a lot.",
     dots: 4,
   },
   Linux: {
     title: "Linux",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    imgUrl: "linux.jpg",
+    text: "Since using Flutter my main OS is now MacOS. However, Linux was what I used before as my main OS for several years.",
     dots: 5,
   },
   Chef: {
     title: "I love to cook",
     imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    text: "I love trying new food and learning new recipes. <br/>My most recent food passion? Ramen!",
     dots: 2,
   },
 };
