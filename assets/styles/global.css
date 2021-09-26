@@ -101,7 +101,7 @@ button,
   color: var(--white);
   border: none;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 button:hover,
@@ -135,8 +135,9 @@ nav > a:first-child {
 
 nav > a.active {
   color: var(--purple);
-  text-shadow: -0.1px -0.1px .5px var(--purple), 0.1px -0.1px .5px var(--purple),
-    -0.1px 0.1px .5px var(--purple), 0.1px 0.1px .5px var(--purple);
+  text-shadow: -0.1px -0.1px 0.5px var(--purple),
+    0.1px -0.1px 0.5px var(--purple), -0.1px 0.1px 0.5px var(--purple),
+    0.1px 0.1px 0.5px var(--purple);
 }
 
 .gradient-1 {
@@ -169,7 +170,12 @@ footer a {
 }
 
 .noselect {
-  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
 }
 
 .overflow-hidden {
@@ -187,10 +193,10 @@ footer a {
   z-index: 1;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   bottom: -3em;
   opacity: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 #snackbar.show {
