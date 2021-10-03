@@ -109,11 +109,21 @@ button:hover,
 
 nav {
   z-index: 100;
-  width: calc(100vw - 80px);
+  width: calc(100vw - 4.5em);
   display: flex;
-  padding: 1em 40px;
+  padding: 1em 3em 1em 1.5em;
   position: fixed;
-  background-color: #f5efedbe;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    background-color: #f5efed;
+    box-shadow: 0 0 10px 5px #00000021;
+  }
+
+  nav > a::before {
+    content: none !important;
+  }
 }
 
 nav > a {
@@ -123,6 +133,25 @@ nav > a {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
+  position: relative;
+}
+
+nav > a:nth-child(2)::before, nav > a:first-child::before {
+  content: "";
+  background-color: #f5efed;
+  padding: 2.5em 200px 0.5em;
+  border-end-start-radius: 40px;
+  position: absolute;
+  z-index: -1;
+  top: -1em;
+  left: -40px;
+  box-shadow: 0 0 10px 5px #00000021;
+}
+
+nav > a:first-child::before {
+  padding: 2.5em 50px 0.5em;
+  border-end-end-radius: 40px;
+  border-end-start-radius: 0;
 }
 
 nav > a:first-child {
