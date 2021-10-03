@@ -41,10 +41,77 @@
 .catan-row > div {
   position: relative;
   cursor: pointer;
+  transform: rotate(0deg);
+  transition: 1s;
 }
 
 .catan-row img {
   height: clamp(4em, 10vw, 10em);
+  transition: .3s;
+}
+
+.catan-row > div:hover {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  animation-name: wiggle;
+  -ms-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: smooth;
+  -ms-animation-timing-function: smooth;
+  animation-timing-function: smooth;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.catan-row > div:hover > img{
+  transform: scale(1.15);
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-3deg);
+  }
+  75% {
+    -webkit-transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-ms-keyframes wiggle {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  25% {
+    -ms-transform: rotate(-3deg);
+  }
+  75% {
+    -ms-transform: rotate(3deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* The following is for the little circles containing the icons */
