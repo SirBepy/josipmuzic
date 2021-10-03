@@ -82,7 +82,7 @@ function preloadCardImages() {
   for (const index in cardDataKeys) {
     const cardKey = cardDataKeys[index];
     cardData[cardKey].img = new Image();
-    cardData.img.setAttribute("draggable", false);
+    cardData.img?.setAttribute("draggable", false);
     cardData[
       cardKey
     ].img.src = `/assets/images/catanCardImages/${cardData[cardKey].imgUrl}`;
