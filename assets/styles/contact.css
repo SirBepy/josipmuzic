@@ -32,7 +32,7 @@ input, textarea {
     background-color: #F5EFED;
     border-radius: 2em;
     height: 2.5em;
-    width: 329px;
+    width: clamp(179px, 50vw, 329px);
     outline: none;
     padding: 0 16px;
     transition: .2s;
