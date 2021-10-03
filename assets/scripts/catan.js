@@ -161,8 +161,8 @@ const cardData = {
   },
   React: {
     title: "React",
-    imgUrl: "music.jpg",
-    text: "...",
+    imgUrl: "react.png",
+    text: "I am very skilled at React and I enjoy using it. I did all sorts of weird things while using it. <br/> <br/>For example: using Next.js, using Typescript, using SCSS, using a few different state management systems...",
     dots: 5,
   },
   Dog: {
@@ -179,8 +179,7 @@ const cardData = {
   },
   Animation: {
     title: "Animation",
-    // TODO: Image for this
-    imgUrl: "RIT.jpeg",
+    imgUrl: "animating.jpg",
     text: "I started animating at a young age. While I don't have my time to do it now, I still find it fascinating and would love to take it up as a more serious hobby in the near future.",
     dots: 4,
   },
@@ -198,15 +197,14 @@ const cardData = {
   },
   Node: {
     title: "Node.js",
-    imgUrl: "RIT.jpeg",
-    text: "...",
+    imgUrl: "nodejs.jpg",
+    text: "Node.js is my favorite way of making a backend service. I love using Javascript and I'm more than familiar with RDBMS's.",
     dots: 5,
   },
   Flutter: {
     title: "Flutter",
-    // TODO: Image for this
-    imgUrl: "RIT.jpeg",
-    text: "...",
+    imgUrl: "flutter.jpg",
+    text: "I started using Flutter a little over a year ago.<br/>Flutter instantly became my all time favorite framework, and Dart my all time favorite programming language.",
     dots: 5,
   },
   Running: {
@@ -217,8 +215,8 @@ const cardData = {
   },
   FutureVision: {
     title: "The Future",
-    imgUrl: "RIT.jpeg",
-    text: "I studied in RIT",
+    imgUrl: "futurevision.jpg",
+    text: "Where do I see myself in a few years?<br/>Well, I want to settle down at a nice company, have a good work/life balance, earn enough so I never have to worry about money, and I want to have many more dogs.",
     dots: 3,
   },
   RIT: {
