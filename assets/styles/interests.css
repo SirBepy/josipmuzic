@@ -6,6 +6,12 @@
   padding-bottom: 25vh;
 }
 
+@media screen and (max-width: 900px) {
+  .wave-section {
+    padding-bottom: 0;
+  }
+}
+
 #interestsBottom {
   bottom: 0;
 }
@@ -17,6 +23,7 @@
 
 #interests {
   z-index: 99;
+  min-height: initial;
 }
 
 #catan {
@@ -27,7 +34,7 @@
 }
 .catan-row {
   display: flex;
-  gap: clamp(.2em, 1vw, 1em);
+  gap: clamp(0.2em, 1vw, 1em);
   margin: -0.5em 0;
 }
 
@@ -36,7 +43,7 @@
   cursor: pointer;
 }
 
-.catan-row img{
+.catan-row img {
   height: clamp(4em, 10vw, 10em);
 }
 
