@@ -4,10 +4,11 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  text-align: center;
 }
 
 #home h1 {
-  font-size: 4.5em;
+  font-size: clamp(2em, 12vw, 4.5em);
   color: var(--black);
   padding: 0;
 }
@@ -17,7 +18,7 @@
 }
 
 #home .small {
-  font-size: 3em;
+  font-size: clamp(1em, 8vw, 3em);
   font-weight: 200;
 }
 

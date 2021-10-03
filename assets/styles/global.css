@@ -41,8 +41,7 @@ button,
 }
 
 h1 {
-  /* TODO: FIND em'S */
-  font-size: 3em;
+  font-size: clamp(2em, 10vw, 3em);
   color: var(--white);
   font-weight: 100;
   padding: 0 20vw;
@@ -50,13 +49,12 @@ h1 {
 
 p,
 li {
-  /* TODO: FIND em'S */
-  font-size: 1em;
+  font-size: clamp(.5em, 5vw, 1em);
   color: var(--light-black);
 }
 
 a {
-  font-size: 1.5em;
+  font-size: clamp(.8em, 5vw, 1.5em);
   text-decoration: none;
   color: var(--black);
   cursor: pointer;
@@ -91,13 +89,12 @@ section {
 button,
 .button {
   display: inline-block;
-  min-width: 241px;
-  min-height: 49px;
-  line-height: 46px;
+  min-width: 12em;
+  line-height: 2.5em;
   background: var(--yellow);
   border-radius: 61px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: clamp(.8em, 5vw, 1.5em);
   color: var(--white);
   border: none;
   cursor: pointer;
