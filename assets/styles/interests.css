@@ -27,13 +27,17 @@
 }
 .catan-row {
   display: flex;
-  gap: 1em;
+  gap: clamp(.2em, 1vw, 1em);
   margin: -0.5em 0;
 }
 
 .catan-row > div {
   position: relative;
   cursor: pointer;
+}
+
+.catan-row img{
+  height: clamp(4em, 10vw, 10em);
 }
 
 /* The following is for the little circles containing the icons */
@@ -47,8 +51,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 3em;
-  height: 3em;
+  width: clamp(2em, 5vw, 3em);
+  height: clamp(2em, 5vw, 3em);
   text-align: center;
   line-height: 2.15em;
 
@@ -88,7 +92,7 @@
 
 .dots {
   line-height: 0;
-  font-size: 1.6em;
+  font-size: clamp(1.2em, 4vw, 1.6em);
   letter-spacing: -2px;
   margin: -3px 2px 3px 0;
 }
