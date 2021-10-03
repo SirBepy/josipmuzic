@@ -49,12 +49,12 @@ h1 {
 
 p,
 li {
-  font-size: clamp(.5em, 5vw, 1em);
+  font-size: clamp(0.5em, 5vw, 1em);
   color: var(--light-black);
 }
 
 a {
-  font-size: clamp(.8em, 5vw, 1.5em);
+  font-size: clamp(0.8em, 5vw, 1.5em);
   text-decoration: none;
   color: var(--black);
   cursor: pointer;
@@ -94,7 +94,7 @@ button,
   background: var(--yellow);
   border-radius: 61px;
   text-align: center;
-  font-size: clamp(.8em, 5vw, 1.5em);
+  font-size: clamp(0.8em, 5vw, 1.5em);
   color: var(--white);
   border: none;
   cursor: pointer;
@@ -149,12 +149,20 @@ nav > a.active {
 
 footer {
   display: flex;
+  gap: clamp(12px, 5vw, 82px);
   justify-content: center;
+  align-items: center;
+  padding-bottom: 36px;
 }
 
 footer a {
-  margin: 36px 82px;
   color: var(--white);
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
 }
 
 .wave {
