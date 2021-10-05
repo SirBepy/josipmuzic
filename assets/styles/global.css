@@ -89,8 +89,8 @@ section {
 button,
 .button {
   display: inline-block;
-  min-width: 12em;
-  line-height: 2.5em;
+  min-width: 10em;
+  line-height: 2em;
   background: var(--yellow);
   border-radius: 61px;
   text-align: center;
@@ -109,9 +109,9 @@ button:hover,
 
 nav {
   z-index: 100;
-  width: calc(100vw - 4.5em);
+  width: calc(100vw - 3em);
   display: flex;
-  padding: 1em 3em 1em 1.5em;
+  padding: 1em 1.5em 1em 1.5em;
   position: fixed;
 }
 
