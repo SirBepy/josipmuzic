@@ -45,10 +45,22 @@ h4 {
 .right-side {
   display: flex;
   flex-direction: column;
+  gap: 1em;
 }
 
-.right-side img {
-  width: 224px;
+#profile-img {
+  width: 15em;
+  height: 15em;
+  border-radius: 100%;
+  background-image: url("./../images/profile-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.2s ease-in-out;
+}
+
+#profile-img:hover {
+  background-image: url("./../images/profile-front.jpg");
 }
 
 .right-side button {
