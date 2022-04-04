@@ -148,9 +148,9 @@ const cardData = {
     dots: 1,
   },
   Married: {
-    title: "Married",
+    title: "Friends",
     imgUrl: "married.jpeg",
-    text: "Together 6 years and counting, she was my motivation to work so hard and get to where I am today.",
+    text: "I love spending time with my friends. My favorite activity is to play boardgames together.",
     dots: 4,
   },
   Traveling: {
